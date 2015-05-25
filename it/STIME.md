@@ -4,17 +4,17 @@
 Stima dei costi di consegna
 ======================
 ### `/v1/estimates/price`, GET
-Passare come payload della richiesta un oggetto json come segue:  
+Specificare i seguenti parametri per il calcolo di una stima:  
 
 | Chiave | Tipo | Descrizione |
 | ------ | ---- | ----------- |
-| *`origin` | *string* | Indirizzo di partenza, può essere un indirizzo testuale o una coppia latitudine, longitudine |
-| *`destinaton` | *string* | Indirizzo di destinazion, può essere un indirizzo testuale o una coppia latitudine, longitudine |
+| *`origin` | *string* | Indirizzo di partenza, può essere un indirizzo testuale o una coppia (latitudine, longitudine) |
+| *`destinaton` | *string* | Indirizzo di destinazione, può essere un indirizzo testuale o una coppia (latitudine, longitudine) |
 | *`amount` | *float* | importo della spesa |
 | *`contract_id` | *int* | Identificativo del contratto con cui calcolare la stima |
-| `invoice_required` | *int* | Specifica se richiesta la fattura. Default: `0` |
+| `invoice_required` | *int* | Specifica se è richiesta la fattura. Default: `0` |
 
-In caso di successo, viene restituito un oggetto con i costi stabiliti dal contratto per ciascuna delle entità coinvolte come segue:
+In caso di successo, viene restituito un oggetto come segue con i costi stabiliti dal contratto per ciascuna delle entità coinvolte:
 ```
 {
     "object": "ESTIMATE",

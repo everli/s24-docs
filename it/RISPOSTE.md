@@ -38,7 +38,7 @@ Nel caso di liste (es: elenco ordini) la risposta è fatta come segue:
 Nel caso di chiamate e risorse (es: richiesta di un ordine) la risposta è del tipo che segue:
 ```
 {
-  object: “order”,
+  object: "order",
   data: {
     // modello dell’ordine
   }
@@ -57,8 +57,7 @@ Nel metadata della risposta ci sono i riferimenti per le pagine precedenti e suc
   "first": "https://www.s24srl.com/api/v1/orders?page=0&itemsPerPage=2",
   "last": "https://www.s24srl.com/api/v1/orders?page=5&itemsPerPage=2",
   "next": "https://www.s24srl.com/api/v1/orders?page=2&itemsPerPage=2",
-  "prev": "https://www.s24srl.com/api/v1/orders?page=0&itemsPerPage=2"
-   },
+  "prev": "https://www.s24srl.com/api/v1/orders?page=0&itemsPerPage=2",
   ..
 }
 ```

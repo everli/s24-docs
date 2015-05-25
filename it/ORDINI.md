@@ -1,5 +1,5 @@
 ## ORDINI
-Il modello dell'ordine è composto come segue (le chiavi con * sono obbligatorie per la creazione di un nuovo ordine, mentre quelle precedute da ~ sono il sola lettura):
+Il modello dell'ordine è composto come segue (le chiavi con * sono obbligatorie per la creazione di un nuovo ordine, mentre quelle precedute da ~ sono in sola lettura):
 
 #### ORDER
 | Chiave | Tipo | Descrizione |
@@ -90,12 +90,12 @@ Il modello dell'ordine è composto come segue (le chiavi con * sono obbligatorie
 Creazione di un ordine
 ======================
 ### `/v1/orders`, POST
-Passare nel payload della richiesta il modello dell'ordine che si vuole creare. In caso di successo, l'ordine è nello stato `DRAFT`
+Passare nel payload della richiesta il modello dell'ordine che si vuole creare. In caso di successo, l'ordine è nello stato `DRAFT`.
 
 Apertura di un ordine
 ======================
 ### `/v1/orders/{order_id}/open`, POST
-Effettua il passaggio dallo stato `DRAFT` allo stato `OPEN`
+Effettua il passaggio dallo stato `DRAFT` allo stato `OPEN`.
 
 Conferma di un ordine
 ======================
@@ -117,9 +117,9 @@ In caso di successo, la risposta è come segue:
 Elenco ordini
 ======================
 ### `/v1/orders`, GET
-Restituisce l'elenco degli ordini
+Restituisce l'elenco degli ordini.
 
-Ordine
+Recupero di un ordine
 ======================
 ### `/v1/orders/{order_id}`, GET
-Restituisci la risorsa specificata dall'id
+Restituisci la risorsa specificata dall'id.
