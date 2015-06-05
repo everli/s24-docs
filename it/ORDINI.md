@@ -72,6 +72,7 @@ Il modello dell'ordine è composto come segue (le chiavi con * sono obbligatorie
 | *`price` | *float* | prezzo (unitario) |
 | `url_thumbnail` | *string* | url per l'anteprima dell'immagine |
 | `note` | *string* | note riguardanti il prodotto |
+| `category_name` | *string* | categoria merceologica del prodotto. I dettagli vengono ordinati secondo questo campo |
 | `ref_id` | *string* | riferimento ad un eventuale riferimento custom |
 
 #### CUSTOMER_INVOICE
