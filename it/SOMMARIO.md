@@ -20,4 +20,6 @@ Per iniziare ad usare le API di S24 hai bisogno di:
 - registrarti con un account developer sulla piattaforma s24
 - generare un API key
 - effettuare richieste a  
-``` https://www.s24srl.com/api/ ```
+``` https://www.s24srl.com/api/ ```  
+- in modalità **sviluppo** (o **test**), effettuare richieste a  
+``` https://staging.s24srl.com/api/ ```   
