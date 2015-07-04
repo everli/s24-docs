@@ -6,5 +6,6 @@ Le API sono progettate per stimare i costi di delivery, consegnare degli ordini 
 - [OVERVIEW](it/SOMMARIO.md)
 - [RISPOSTE](it/RISPOSTE.md)
 - [ORDINI](it/ORDINI.md)
+- [DISPONIBILITÀ](it/DISPONIBILITA.md)
 - [STIME](it/STIME.md)
 - [WEBHOOKS](it/WEBHOOKS.md)

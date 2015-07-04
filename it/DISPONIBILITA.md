@@ -17,7 +17,7 @@ il raggio specificato come parametro.
 | *`radius` | *int* | max: 15KM |
 | *`lat` | *float* | latitudine del centro di massa |
 | *`lng` | *float* | longitudine del centro di massa |
-| *`data` | *array* | max: 100 items, lista di località per cui valutare la disponibilità (vedi modello `LOCALITY` |
+| *`data` | *array* | max: 100 items, lista di località per cui valutare la disponibilità (vedi modello `LOCALITY`) |
 
 #### LOCALITY
 | Chiave | Tipo | Descrizione |
