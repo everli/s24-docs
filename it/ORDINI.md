@@ -38,7 +38,7 @@ Il modello dell'ordine è composto come segue (le chiavi con * sono obbligatorie
 | *`last_name` | *string* | cognome |
 | *`email` | *email* | email |
 | *`phone` | *string* | numero di telefono **valido** (inizia con +39, senza spazi) |
-| `ref_id` | *string* | riferimento ad un eventuale riferimento custom |
+| `ref_id` | *string* | riferimento *custom* al customer |
 | `lat` | *float* | latitudine del cliente, se mancante viene calcolata da S24 |
 | `lng` | *float* | longitudine del cliente, se mancante viene calcolata da S24 |
 | ~`full_name` | *string* | nome e cognome del cliente |
@@ -58,6 +58,7 @@ Il modello dell'ordine è composto come segue (le chiavi con * sono obbligatorie
 | `phone` | *string* | numero di telefono **valido** (inizia con +39, senza spazi) |
 | `lat` | *float* | latitudine del cliente, se mancante viene calcolata da S24 |
 | `lng` | *float* | longitudine del cliente, se mancante viene calcolata da S24 |
+| `ref_id` | *string* | riferimento *custom* allo store |
 
 #### ORDER_DETAIL
 | Chiave | Tipo | Descrizione |
