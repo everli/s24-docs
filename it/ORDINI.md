@@ -38,6 +38,7 @@ Il modello dell'ordine è composto come segue (le chiavi con * sono obbligatorie
 | *`last_name` | *string* | cognome |
 | *`email` | *email* | email |
 | *`phone` | *string* | numero di telefono **valido** (inizia con +39, senza spazi) |
+| `vat` | *string* | partita IVA o codice fiscale del cliente |
 | `ref_id` | *string* | riferimento *custom* al customer |
 | `lat` | *float* | latitudine del cliente, se mancante viene calcolata da S24 |
 | `lng` | *float* | longitudine del cliente, se mancante viene calcolata da S24 |
