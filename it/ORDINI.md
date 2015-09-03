@@ -6,6 +6,7 @@ Il modello dell'ordine è composto come segue (le chiavi con * sono obbligatorie
 | ------ | ---- | ----------- |
 | ~`id` | *int* | identificatore univoco |
 | *`contract_id` | *int* | identificatore del contratto da applicare per quest'ordine |
+| `ref_id` | *string* | riferimento *custom* all'ordine |
 | *`customer` | *json* | oggetto che identifica il cliente (vedi modello `CUSTOMER`) |
 | *`store` | *json* | oggetto che identifica il negozio (vedi modello `STORE`) |
 | *`details` | *array* | lista di prodotti (vedi modello `ORDER_DETAIL`) |
@@ -95,6 +96,16 @@ Creazione di un ordine
 ======================
 ### `/v1/orders`, POST
 Passare nel payload della richiesta il modello dell'ordine che si vuole creare. In caso di successo, l'ordine è nello stato `DRAFT`.
+
+Modifica di un ordine
+======================
+### `/v1/orders/{order_id}`, PUT
+È possibile, prima che un ordine sia confermato (`status = CONFIRMED`) modificare alcune informazioni dell'ordine.  
+Passare nel payload della richiesta un json con i valori che si vogliono modificare. I campi dell'ordine che si possono modificare sono:
+- `ref_id`
+- `notes`  
+
+In caso di successo viene tornato il modello dell'ordine.
 
 Apertura di un ordine
 ======================
