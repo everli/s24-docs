@@ -73,6 +73,7 @@ Il modello dell'ordine è composto come segue (le chiavi con * sono obbligatorie
 | *`type` | *int* | costante che indica l'unità di misura: Valori consentiti: 1 - pezzo, 2 - grammi, 3 - chilogrammi  |
 | `value` | *float* | valore associato all'unità di misura |
 | *`price` | *float* | prezzo (unitario) |
+| `price_real` | *float* | uso interno |
 | `url_thumbnail` | *string* | url per l'anteprima dell'immagine |
 | `note` | *string* | note riguardanti il prodotto |
 | `category_name` | *string* | categoria merceologica del prodotto. I dettagli vengono ordinati secondo questo campo |
