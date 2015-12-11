@@ -10,7 +10,7 @@ La risposta sarà la copia dell'array `data` sottomesso, ripulito dalle localit�
 #### PAYLOAD
 | Chiave | Tipo | Descrizione |
 | ------ | ---- | ----------- |
-| *`radius` | *int* | max: 15KM |
+| *`radius` | *int* | max: 10KM |
 | *`lat` | *float* | latitudine del centro di massa |
 | *`lng` | *float* | longitudine del centro di massa |
 | *`data` | *array* | max: 100 items, lista di località per cui valutare la disponibilità (vedi modello `LOCALITY`) |
@@ -21,3 +21,49 @@ La risposta sarà la copia dell'array `data` sottomesso, ripulito dalle localit�
 | `id` | *int* | identificatore della località |
 | *`lat` | *float* | latitudine della località |
 | *`lng` | *float* | longitudine della località |
+
+Disponibilità specifica per slot orari
+=======================
+### `/v1/availability/time`, POST
+Questo servizio filtra una serie di slot orari (per i quali idealmente il cliente vorrebbe proporre la consegna) secondo l'effettiva disponibilità della rete logistica di S24.  
+Nel caso in cui per una certa fascia oraria non sia possibile effettuare la consegna (nessuna disponibilità/fattorini occupati), tale slot viene rimosso dalla lista degli input.
+#### PAYLOAD
+| Chiave | Tipo | Descrizione |
+| ------ | ---- | ----------- |
+| *`radius` | *int* | max: 10KM |
+| *`lat` | *float* | latitudine del punto vendita |
+| *`lng` | *float* | longitudine del punto vendita |
+| *`data` | *array* | oggetto specifico che indica il modello giornaliero della disponibilità. Vedi modello `DATA` |
+
+#### DATA
+- *Chiavi*:  `{Y-m-d}` Data per cui si vuole valutare la disponibilità nel formato anno-mese-giorno
+- *Valori*: `[(H:i:s)_1, (H:i:s)_2, ..., (H)_n]` Lista di slot, ogni elemento rappresenta l'ora di inizio consegna (formato ore:minuti:secondi)
+
+Esempio di richiesta:
+```
+{
+  "lat": 44.5067177,
+  "lng": 10.9475117,
+  "radius": 10,
+  "data": {
+    "2015-10-28" : ["09:00:00", "10:00:00", "11:00:00", "12:00:00"],
+    "2015-10-29" : ["09:00:00", "10:00:00", "11:00:00", "12:00:00"],
+    "2015-10-30" : ["09:00:00", "10:00:00", "11:00:00", "12:00:00"]
+  }
+}
+```
+Esempio di risposta:
+```
+{
+  "object": "list",
+  "data": {
+    "lat": 44.5067177,
+    "lng": 10.9475117,
+    "data": {
+      "2015-10-28": ["09:00:00"],
+      "2015-10-29": ["09:00:00", "11:00:00", "12:00:00"],
+      "2015-10-30": []
+    }
+  }
+}
+```
