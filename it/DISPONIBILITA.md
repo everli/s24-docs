@@ -1,15 +1,11 @@
 ## DISPONIBILITÀ
 
-Disponibilità per una consegna
+Disponibilità generica per una consegna
 ======================
 ### `/v1/availability`, POST
-Passare nel payload della richiesta la dimensione del raggio, il centro di 
-massa e la lista di località per cui si vuole valutare la disponibilità
-del delivery da parte di S24.  
-La risposta sarà la copia dell'array `data` sottomesso, ripulito dalle
-località che non soddisfano il test di disponibilità.  
-Il test di disponibilità prevede che esista un fattorino abilitato entro
-il raggio specificato come parametro.
+Il servizio filtra i punti vendita che non soddisfano il test di disponibilità di S24: nel caso non esista un fattorino abilitato all'interno del raggio specificato come parametro il test dà risultato negativo.  
+Passare nel payload della richiesta la dimensione del raggio, il centro di massa (coordinate del cliente) e la lista di località (coordinate dei punti vendita) per cui si vuole valutare la disponibilità.  
+La risposta sarà la copia dell'array `data` sottomesso, ripulito dalle località che non soddisfano il test.
 
 #### PAYLOAD
 | Chiave | Tipo | Descrizione |
