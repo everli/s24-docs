@@ -5,7 +5,8 @@ Disponibilità generica per una consegna
 ### `/v1/availability`, POST
 Il servizio filtra i punti vendita che non soddisfano il test di disponibilità di S24: nel caso non esista un fattorino abilitato all'interno del raggio specificato come parametro il test dà risultato negativo.  
 Passare nel payload della richiesta la dimensione del raggio, il centro di massa (coordinate del cliente) e la lista di località (coordinate dei punti vendita) per cui si vuole valutare la disponibilità.  
-La risposta sarà la copia dell'array `data` sottomesso, ripulito dalle località che non soddisfano il test.
+Nel caso in cui la distanza tra cliente e punto vendita superi la distanza concordata contrattualmente, la richiesta è considerata invalida e viene ritornato un errore di tipo `PRECONDITION FAILED` (`status_code 412`).  
+Nel caso in cui invece questa prima condizione venga verificata, la risposta sarà la copia dell'array `data` sottomesso, ripulito dalle località che non soddisfano il test.
 
 #### PAYLOAD
 | Chiave | Tipo | Descrizione |
