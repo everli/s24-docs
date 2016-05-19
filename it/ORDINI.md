@@ -68,6 +68,7 @@ Il modello dell'ordine è composto come segue (le chiavi con * sono obbligatorie
 | ~`id` | *int* | identificatore del prodotto |
 | *`name` | *string* | nome del prodotto |
 | *`quantity` | *float* | quantità (min: 1) |
+| *`quantity_found` | *float* | quantità trovata dal picker/shopper (min: 1) |
 | *`description` | *string* | descrizione |
 | *`replaceable` | *int* | costante numerica che indica la sostituibilità del prodotto (spiega cosa fare al fattorino in caso non trovi il prodotto). Valori consentiti: 1 - cancella il prodotto dall'ordine, 2 - sostituisci il prodotto con uno similare, 3 - chiama il cliente e proponi alternative |
 | *`type` | *int* | costante che indica l'unità di misura: Valori consentiti: 1 - pezzo, 2 - grammi, 3 - chilogrammi, 4 - litri |
