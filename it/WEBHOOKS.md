@@ -12,8 +12,9 @@ Queste richieste contengono nel payload le informazioni circa l'aggiornamento av
 ```
 Ad ogni passaggio di stato dell'ordine (*CONFIRMED*->*ASSIGNED*, *ASSIGNED*->*PAID*, *PAID*->*DELIVERED* ecc..) e alla sottomissione di un feedback viene lanciato un webhook con il modello della risorsa e, nella chiave `event` una stringa identificativa dell'evento generato:
 - `order.delivery_time_updated` - aggiornata la data di consegna
-- `order.confirmed` - ordine confermato: partito il job di ricerca di fattorini disponibili
-- `order.assigned`- ordine assegnato ad un fattorino
+- `order.confirmed` - ordine confermato: partito il job di ricerca di Shopper disponibili
+- `order.assigned`- ordine assegnato ad uno Shopper
+- `order.processing`- ordine in elaborazione dallo Shopper
 - `order.paid` - ordine pagato, caricato lo scontrino
 - `order.delivered` - ordine consegnato al cliente
 - `order.deleted` - ordine eliminato
