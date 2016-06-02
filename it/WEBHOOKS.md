@@ -18,7 +18,6 @@ Ad ogni passaggio di stato dell'ordine (*CONFIRMED*->*ASSIGNED*, *ASSIGNED*->*PA
 - `order.paid` - ordine pagato, caricato lo scontrino
 - `order.delivered` - ordine consegnato al cliente
 - `order.deleted` - ordine eliminato
-- `feedback.submitted` - inserito un feedback per un ordine
 - `rating.submitted` - inserito un rating per un ordine
 
 Per permetterti di autenticare i webhooks di S24, la chiamata viene popolata con due header custom:  
