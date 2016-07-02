@@ -12,16 +12,16 @@ Nel caso in cui invece questa prima condizione venga verificata, la risposta sar
 | Chiave | Tipo | Descrizione |
 | ------ | ---- | ----------- |
 | *`radius` | *int* | max: 10KM |
-| *`lat` | *float* | latitudine del centro di massa |
-| *`lng` | *float* | longitudine del centro di massa |
+| *`lat` | *float* | latitudine del centro di massa (cliente) |
+| *`lng` | *float* | longitudine del centro di massa  (cliente) |
 | *`data` | *array* | max: 100 items, lista di località per cui valutare la disponibilità (vedi modello `LOCALITY`) |
 
 #### LOCALITY
 | Chiave | Tipo | Descrizione |
 | ------ | ---- | ----------- |
 | `id` | *int* | identificatore della località |
-| *`lat` | *float* | latitudine della località |
-| *`lng` | *float* | longitudine della località |
+| *`lat` | *float* | latitudine della località (punto vendita) |
+| *`lng` | *float* | longitudine della località (punto vendita) |
 
 Disponibilità specifica per slot orari
 =======================
