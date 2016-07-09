@@ -71,7 +71,7 @@ Il modello dell'ordine è composto come segue (le chiavi con * sono obbligatorie
 | *`quantity_found` | *float* | quantità trovata dal picker/shopper (min: 1) |
 | *`description` | *string* | descrizione |
 | *`replaceable` | *int* | costante numerica che indica la sostituibilità del prodotto (spiega cosa fare al fattorino in caso non trovi il prodotto). Valori consentiti: 1 - cancella il prodotto dall'ordine, 2 - sostituisci il prodotto con uno similare, 3 - chiama il cliente e proponi alternative |
-| *`type` | *int* | costante che indica l'unità di misura: Valori consentiti: 1 - pezzo, 2 - grammi, 3 - chilogrammi, 4 - litri |
+| *`type` | *int* | costante che indica l'unità di misura: Valori consentiti: 1 - pezzo, 2 - grammi, 3 - chilogrammi, 4 - litri, 5 - confezione, 6 - metri, 7 - etti, 8 - paia, 9 - millilitri |
 | `value` | *float* | valore associato all'unità di misura |
 | *`price` | *float* | prezzo (unitario) |
 | `price_real` | *float* | uso interno |
